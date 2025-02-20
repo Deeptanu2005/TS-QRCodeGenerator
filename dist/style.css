@@ -1,0 +1,61 @@
+.custom-bg-lightest {
+  background-color: #FFF2F2 !important;
+}
+
+.custom-text-lightest {
+  color: #FFF2F2 !important;
+}
+
+.custom-border-lightest {
+  border-color: #FFF2F2 !important;
+}
+
+.custom-bg-light {
+  background-color: #A9B5DF !important;
+}
+
+.custom-text-light {
+  color: #A9B5DF !important;
+}
+
+.custom-border-light {
+  border-color: #A9B5DF !important;
+}
+
+.custom-bg-medium {
+  background-color: #7886C7 !important;
+}
+
+.custom-text-medium {
+  color: #7886C7 !important;
+}
+
+.custom-border-medium {
+  border-color: #7886C7 !important;
+}
+
+.custom-bg-dark {
+  background-color: #4F5B9D !important;
+}
+
+.custom-text-dark {
+  color: #4F5B9D !important;
+}
+
+.custom-border-dark {
+  border-color: #4F5B9D !important;
+}
+
+.custom-bg-darkest {
+  background-color: #2D336B !important;
+}
+
+.custom-text-darkest {
+  color: #2D336B !important;
+}
+
+.custom-border-darkest {
+  border-color: #2D336B !important;
+}
+
+/*# sourceMappingURL=style.css.map */

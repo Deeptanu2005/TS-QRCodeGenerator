@@ -1,0 +1,22 @@
+$colors: (
+    "lightest": #FFF2F2,
+    "light": #A9B5DF,
+    "medium": #7886C7,
+    "dark": #4F5B9D,
+    "darkest": #2D336B
+);
+
+// Generate background, text, and border color classes dynamically
+@each $name, $color in $colors {
+    .custom-bg-#{$name} {
+        background-color: $color !important; // Override Bootstrap if needed
+    }
+
+    .custom-text-#{$name} {
+        color: $color !important;
+    }
+
+    .custom-border-#{$name} {
+        border-color: $color !important;
+    }
+}
