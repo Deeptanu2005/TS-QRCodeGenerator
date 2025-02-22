@@ -9,6 +9,8 @@ button.addEventListener("click", () => {
     }
     const url = qrUrl.value.trim();
     if (url !== "") {
+        const myModal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
+        myModal.show();
         QRCode.toDataURL(url)
             .then((generatedUrl) => {
             image.src = generatedUrl;

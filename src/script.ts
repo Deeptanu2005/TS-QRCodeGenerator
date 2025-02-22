@@ -1,5 +1,5 @@
-// TypeScript code to generate QR code using QRCode library
 declare var QRCode: any;
+declare var bootstrap: any;
 
 // Get elements with proper types
 const qrUrl: HTMLInputElement = document.getElementById("qrCodeURL") as HTMLInputElement;
@@ -15,6 +15,8 @@ button.addEventListener("click", (): void => {
     const url: string = qrUrl.value.trim();
 
     if (url !== "") {
+        const myModal = new bootstrap.Modal(document.getElementById("staticBackdrop") as HTMLElement);
+        myModal.show();
         QRCode.toDataURL(url)
             .then((generatedUrl: string): void => {
                 image.src = generatedUrl;
@@ -34,7 +36,7 @@ function downloadImage(): void {
 
     const link: HTMLAnchorElement = document.createElement("a") as HTMLAnchorElement;
     link.href = img.src;
-    link.download = "qr-image.png"; 
+    link.download = "qr-image.png";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
