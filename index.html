@@ -13,10 +13,11 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- FontAwesome Script-->
     <script src="https://kit.fontawesome.com/c1c38b6dde.js" crossorigin="anonymous"></script>
-    <title>Generate QR</title>
+    <title>GenerateQR</title>
 </head>
 
 <body class="custom-bg-medium">
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-dark custom-bg-darkest">
         <div class="container-fluid">
             <a class="navbar-brand custom-text-lightest" href="/">
@@ -26,17 +27,26 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
     <h3 class="container text-center my-3 custom-text-lightest">Generate QR Code</h3>
 
     <div class="container px-4 input-group flex-nowrap">
         <span class="input-group-text custom-bg-dark custom-border-dark custom-text-lightest" id="addon-wrapping"><i
                 class="fa-solid fa-link"></i></span>
-        <input type="text" class="form-control custom-bg-lightest custom-text-darkest" id="qrCodeURL" placeholder="Enter Link" />
-        <button class="btn custom-text-lightest custom-bg-dark custom-border-dark" type="button" id="genQR">Generate</button>
+        <input type="text" class="form-control custom-bg-lightest custom-text-darkest" id="qrCodeURL"
+            placeholder="Enter Link" />
+        <button class="btn custom-text-lightest custom-bg-dark custom-border-dark" type="button"
+            id="genQR">Generate</button>
     </div>
 
     <h3 class="text-center custom-text-lightest mt-5">Your QR Codes</h3>
-    <p class="text-center custom-text-lightest">This feature is coming soon.</p>
+
+    <div class="container d-flex justify-content-center my-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center w-100" id="savedQRs">
+            <!-- QR Codes will be displayed here -->
+            
+        </div>
+    </div>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -52,6 +62,7 @@
                 <div class="modal-footer  custom-bg-lightest">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-success" onclick="downloadImage()">Download Image</button>
+                    <button type="button" class="btn btn-primary" onclick="saveQR()">Save QR...</button>
                 </div>
             </div>
         </div>
@@ -62,11 +73,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-        <!-- QRCode.js Script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.4.4/qrcode.js" integrity="sha512-oxrVyBhqnzQ0BzuM0A/6dEIk0alz0p4SpDRaWvtuUoarIc8rnL5lVniHG5Dp21MRFojcQcmKHjaskNXhSaUPPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- QRCode.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.4.4/qrcode.js"
+        integrity="sha512-oxrVyBhqnzQ0BzuM0A/6dEIk0alz0p4SpDRaWvtuUoarIc8rnL5lVniHG5Dp21MRFojcQcmKHjaskNXhSaUPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- Custom JavaScript -->
-        <script src="dist/script.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="dist/script.js"></script>
 </body>
 
 </html>
